@@ -101,3 +101,15 @@ The detail information can be fond [here](https://icmr21-realdsr-challenge.githu
 :e-mail: Contact
 
 If you have any question, please email `zhwzhong@hit.edu.cn` 
+
+### Cititation:
+@ARTICLE{10089494,
+  author={Zhong, Zhiwei and Liu, Xianming and Jiang, Junjun and Zhao, Debin and Ji, Xiangyang},
+  journal={IEEE Transactions on Neural Networks and Learning Systems}, 
+  title={Deep Attentional Guided Image Filtering}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-15},
+  doi={10.1109/TNNLS.2023.3253472}}
+
