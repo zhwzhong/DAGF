@@ -103,6 +103,11 @@ class NYU(data.Dataset):
             else:
                 tmp_gt = (tmp_gt - np.min(tmp_gt)) / (np.max(tmp_gt) - np.min(tmp_gt))
                 lr_img = utility.get_lowers(tmp_gt, factor=self.args.scale, mode='bicubic')
+
+            if self.args.with_noisy:
+                lr_img = np.random.normal(0, 5 / 255, lr_img.shape) + lr_img
+                lr_img = np.clip(lr_img, 0, 1)
+            
             lr_up = utility.get_lowers(lr_img, factor=1 / self.args.scale, mode='bicubic')
             lr_img, gt_img = np.expand_dims(lr_img, 0), np.expand_dims(gt_img, 0)
             lr_up = np.expand_dims(lr_up, 0)
@@ -116,9 +121,7 @@ class NYU(data.Dataset):
             # print(gt_img.shape, rgb_img.shape, 'ppp')
             rgb_name = os.path.basename(rgb_name)
 
-        if self.args.with_noisy:
-            lr_img = np.random.normal(0, 5 / 255, lr_img.shape) + lr_img
-            lr_img = np.clip(lr_img, 0, 1)
+        
 
         lr_img, lr_up, gt_img, rgb_img = utility.np_to_tensor(lr_img, lr_up, gt_img, rgb_img)
 
