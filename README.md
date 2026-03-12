@@ -101,7 +101,7 @@ The detail information can be fond [here](https://icmr21-realdsr-challenge.githu
 
 :e-mail: Contact
 
-If you have any question, please email `zhwzhong@hit.edu.cn` 
+If you have any question, please email `zhwzhong.cs@gmail.com` 
 
 ### Cititation:
 @ARTICLE{10089494,
